@@ -23,8 +23,7 @@ def pascal_triangle(n):
                 if (j == 0 or j == i):
                     row.append(1)
                 else:
-                    row.append(pasc_tri[i - 1][j - 1] +
-                                   pasc_tri[i - 1][j])
+                    row.append(pasc_tri[i - 1][j - 1] + pasc_tri[i - 1][j])
 
             pasc_tri.append(row)
 
