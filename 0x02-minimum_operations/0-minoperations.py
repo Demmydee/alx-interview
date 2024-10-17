@@ -5,8 +5,8 @@
 
 
 def minOperations(n):
-    if n <= 1:
-        return(0)
+    if not isinstance(n, int):
+        return 0
     copy = 1
     x = 1
     op_count = 0
