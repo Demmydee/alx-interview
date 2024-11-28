@@ -9,10 +9,10 @@ def makeChange(coins, total):
     coins.reverse()
     num = 0
     count = 0
-    while result != total:
+    is_running = True
+    while is_running:
         if total == 0:
-            return(0)
-            break
+            return 0
         if result + coins[num] <= total:
             result += coins[num]
             count += 1
@@ -20,7 +20,7 @@ def makeChange(coins, total):
             if num < len(coins)-1:
                 num += 1
             else:
-                return(-1)
+                return -1
                 break
         if result == total:
-            return(count)
+            return count
