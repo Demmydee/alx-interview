@@ -4,6 +4,10 @@
 
 
 def makeChange(coins, total):
+    """
+    Determines the fewest number of coins needed to meet
+    a given amount when given a pile of coins
+    """
     result = 0
     coins.sort()
     coins.reverse()
@@ -16,7 +20,7 @@ def makeChange(coins, total):
         if result + coins[num] <= total:
             result += coins[num]
             count += 1
-        elif result + coins[num] > total:
+        else:
             if num < len(coins)-1:
                 num += 1
             else:
